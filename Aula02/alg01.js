@@ -1,4 +1,4 @@
-let nome =  "Isaac";
+let nome = "Isaac";
 
 let idade = 18;
 
@@ -21,10 +21,10 @@ console.log(multiplicacao);
 let divisao = 2 / 2;
 console.log(divisao);
 
-let resto = 10 % 3; 
+let resto = 10 % 3;
 console.log(resto);
 
 let maiorDeIdade = true;
 
-console.log(mensagem)
-console.log (`Faltam, ${faltam} anos para você aposentar`)
+console.log(mensagem);
+console.log(`Faltam, ${faltam} anos para você aposentar`);
