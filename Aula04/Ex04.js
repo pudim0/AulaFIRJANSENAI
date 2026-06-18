@@ -1,7 +1,7 @@
 //Desenvolver um programa que pergunte a sigla do estado onde a pessoa reside, e apresente uma das seguintes
 //alternativas como resposta: Carioca, Paulista, Mineiro, Outros Estados.
 
-let estado = "SP";
+let estado = "es".toUpperCase();
 
 switch (estado) {
   case "RJ":
@@ -17,6 +17,6 @@ switch (estado) {
     console.log("Você existe????????????");
     break;
   default:
-    console.log("Cacete, é pra selecionar os estados so Sudeste");
+    console.log("Cacete, é pra selecionar os estados do Sudeste");
     break;
 }

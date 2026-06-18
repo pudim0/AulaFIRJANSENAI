@@ -12,28 +12,28 @@
 //gravidadeRelativa. Caso o usuário digite um código que não esteja na tabela, informar que o código inserido
 //está errado.
 
-let peso = 60;
+let peso = 90;
 let planeta = 2;
 
 switch (planeta) {
   case 1:
-    console.log(`Seu peso em Mercúrio é ${((peso / 10) * 0.37).toFixed(2)}kg`);
+    console.log(`Seu peso em Mercúrio é ${((peso) * 0.37).toFixed(2)}kg`);
     break;
   case 2:
-    console.log(`Seu peso em Vênus é ${((peso / 10) * 0.88).toFixed(2)}kg`);
+    console.log(`Seu peso em Vênus é ${((peso) * 0.88).toFixed(2)}kg`);
     break;
   case 3:
-    console.log(`Seu peso em Marte é ${((peso / 10) * 0.38).toFixed(2)}kg`);
+    console.log(`Seu peso em Marte é ${((peso) * 0.38).toFixed(2)}kg`);
     break;
   case 4:
-    console.log(`Seu peso em Júpiter é ${((peso / 10) * 2.64).toFixed(2)}kg`);
+    console.log(`Seu peso em Júpiter é ${((peso) * 2.64).toFixed(2)}kg`);
     break;
   case 5:
-    console.log(`Seu peso em Saturno é ${((peso / 10) * 1.15).toFixed(2)}kg`);
+    console.log(`Seu peso em Saturno é ${((peso) * 1.15).toFixed(2)}kg`);
     break;
   case 6:
-    console.log(`Seu peso em Urano é ${((peso / 10) * 1.17).toFixed(2)}kg`);
+    console.log(`Seu peso em Urano é ${((peso) * 1.17).toFixed(2)}kg`);
     break;
   default:
-    console.log(`Código inserido inválido.`)
+    console.log(`Código inserido inválido.`);
 }
