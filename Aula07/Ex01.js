@@ -1,4 +1,4 @@
-// 1. Sistema de Gestão Escolar (Objetos + Vetores + Laços)
+/* 1. Sistema de Gestão Escolar (Objetos + Vetores + Laços)
 // Este exercício foca em agrupar dados heterogêneos (objetos) dentro de uma lista (vetor) e processá-los com laços
 // .
 // Enunciado: Crie um programa em TypeScript que gerencie uma lista de alunos.
@@ -8,8 +8,7 @@
 // . Para cada aluno, utilize um laço interno (ou método de acumulador) para calcular a média das notas
 // .
 // Saída: Exiba o nome do aluno, suas notas e se ele está "Aprovado" (média >= 7) ou "Reprovado"
-// .
-
+*/
 function gerarnotasaleatorio() {
   return Math.floor(Math.random() * 10);
 }
