@@ -40,8 +40,8 @@ class Carro {
     this.velocidadeAtual += valor;
     this.historico.push(`Acelerou ${valor} km/h`);
   }
-  frear(valor: number): void {
-    const velocidadeAnterior = this.velocidadeAtual;
+  frear(valor: number): void { // não cria a variável
+    const velocidadeAnterior = this.velocidadeAtual; // só cria se vc pedir com void, se não, não cria
     this.velocidadeAtual -= valor;
     if (this.velocidadeAtual < 0) {
       this.velocidadeAtual = 0;
@@ -50,7 +50,7 @@ class Carro {
       `Freou ${velocidadeAnterior - this.velocidadeAtual} km/h`,
     );
   }
-  classificar(): string {
+  classificar(): string { //let classificacao: string;
     if (this.ano < 2000) {
       return "Carro Antigo\n";
     } else if (this.ano <= 2020) {
