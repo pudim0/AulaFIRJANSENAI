@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BBB: Bom, Barato e Bolado</title>
-
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +51,7 @@
         text-align: center;
         display: block;
         width: 80%;
-        max-width: 600px;
+        max-width: 1000px;
       }
 
       table {
@@ -85,7 +84,6 @@
       }
     </style>
   </head>
-
   <body>
     <header id="Header">
       <img
@@ -96,88 +94,56 @@
 
       <h1>Bom, Barato e Bolado</h1>
       <hr />
-
-      <nav aria-label="Menu principal">
+      <nav aria-label="Menu Principal">
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li>
             <a href="#" aria-current="page"
-              ><b><u>Home</u></b></a
+              ><b><u>Produtos</u></b></a
             >
           </li>
-          <li>
-            <a href="/HTML/Aula01/Produtos.html">Produtos</a>
-          </li>
-          <li>
-            <a href="#">Cupons</a>
-          </li>
-          <li>
-            <a href="#Contato">Contato</a>
-          </li>
+          <li><a href="#">Cupons</a></li>
+          <li><a href="#Contato">Contato</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section aria-labelledby="destaque">
-        <h2 id="destaque">
-          <a href="snoopdog.html">Snoop Dogg investe nessa página!</a>
-        </h2>
-
-        <h2>Produtos em destaque</h2>
-
-        <article>
-          <h3>Beck</h3>
-          <p>Beck clássico do dia a dia.</p>
-        </article>
-
-        <article>
-          <h3>Malbeck</h3>
-          <p>
-            O beck cheiroso pra quem não quer ficar com cheiro de maconha depois
-            de fumar 1.
-          </p>
-        </article>
-
-        <article>
-          <h3>Pó de 5</h3>
-          <p>Pra dar aquele raio curtinho.</p>
-        </article>
-      </section>
-    </main>
-    <h4>
-      <table class="horario-funcionamento">
+    <h2>
+      <table class="tabela-produtos">
         <thead>
-          <th colspan="4">Horário de Funcionamento</th>
+          <tr>
+            <th>Produto</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <th>Manhã</th>
-            <th>Tarde</th>
-            <th>Noite</th>
+            <td>Beck</td>
+            <td>Beck clássico do dia a dia</td>
+            <td>R$ 10,00</td>
           </tr>
           <tr>
-            <th>Quarta a Sexta</th>
-            <td>10:00 - 12:00</td>
-            <td>16:00 - 18:00</td>
-            <td>18:00 - 03:00</td>
+            <td>Malbeck</td>
+            <td>
+              O beck cheiroso pra quem não quer ficar com cheiro de maconha
+              depois de fumar 1
+            </td>
+            <td>R$ 20,00</td>
           </tr>
-          <tr>
-            <th >Sábado e Domingo</th>
-            <td>7:00 - 12:00</td>
-            <td>16:00 - 18:00</td>
-            <td>18:00 - 05:00</td>
-          </tr>
+          <td>Pó de 5</td>
+          <td>Pra dar aquele raio curtinho</td>
+          <td>R$ 5,00</td>
         </tbody>
       </table>
-    </h4>
-    <footer id="Contato">
-      <p>&copy; 2026 Bom, Barato e Bolado</p>
-      <p>Contato: (21) 99985-2931</p>
+    </h2>
 
-      <p>
-        <a href="#Header">Voltar ao topo</a>
-      </p>
+    <footer id="Contato">
+      <p>&copy; 2026 Bom, Barato e Bolado - Loja de Beck muito foda</p>
+      Contato: (21) 99985-2931
+    </footer>
+    <footer>
+      <a href="#Header">Voltar ao topo</a>
     </footer>
   </body>
 </html>
