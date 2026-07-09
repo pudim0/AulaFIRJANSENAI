@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISAAC :: Your Digital Knowledge Universe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEX BACKGROUND LAYER -->
+<div class="hex-bg" aria-hidden="true"></div>
+
+<!-- TOP UTILITY BAR -->
+<div class="util-bar">
+  <div class="util-inner">
+    <span class="util-item">🕐 <span id="clock">00:00:00</span></span>
+    <span class="util-sep">|</span>
+    <span class="util-item">Última atualização: <strong>09 JUL 2026</strong></span>
+    <span class="util-sep">|</span>
+    <span class="util-item status-online">● SYSTEM ONLINE</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo-block">
+      <svg class="logo-mark" width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="26,2 47,14 47,38 26,50 5,38 5,14" fill="#0033A0" stroke="#FFCC00" stroke-width="2"/>
+        <polygon points="26,10 40,18 40,34 26,42 12,34 12,18" fill="#3366CC"/>
+        <text x="26" y="30" text-anchor="middle" font-family="Verdana" font-size="14" font-weight="bold" fill="#FFCC00">I</text>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-title">ISAAC</span>
+        <span class="logo-tagline">YOUR DIGITAL KNOWLEDGE UNIVERSE</span>
+      </div>
+    </a>
+    <div class="visitor-chip">
+      <span class="visitor-label">VISITORS</span>
+      <span class="visitor-count" id="visitorCount">000024581</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#top" class="nav-link active">HOME</a></li>
+      <li><a href="#curriculo" class="nav-link">CURRÍCULO</a></li>
+      <li><a href="#hobbies" class="nav-link">HOBBIES</a></li>
+      <li><a href="#interesses" class="nav-link">INTERESSES</a></li>
+      <li><a href="#projetos" class="nav-link">PROJETOS</a></li>
+      <li><a href="#contato" class="nav-link">CONTATO</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-hex-overlay" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">:: PORTAL DE CONHECIMENTO DIGITAL ::</p>
+      <h1 class="hero-title">THE ULTIMATE<br>KNOWLEDGE PORTAL</h1>
+      <p class="hero-sub">Desenvolvimento Web &nbsp;•&nbsp; Design &nbsp;•&nbsp; Filosofia &nbsp;•&nbsp; Tecnologia &nbsp;•&nbsp; Projetos</p>
+      <a href="#sobre" class="btn-explore">
+        <span class="btn-explore-arrow">▶</span> EXPLORE NOW
+      </a>
+      <div class="hero-ticker">
+        <div class="hero-ticker-track">
+          <span>BEM-VINDO AO MEU UNIVERSO DIGITAL&nbsp;&nbsp;★&nbsp;&nbsp;EXPLORE PROJETOS, HOBBIES E INTERESSES&nbsp;&nbsp;★&nbsp;&nbsp;ATUALIZADO EM 09 JUL 2026&nbsp;&nbsp;★&nbsp;&nbsp;BEM-VINDO AO MEU UNIVERSO DIGITAL&nbsp;&nbsp;★&nbsp;&nbsp;EXPLORE PROJETOS, HOBBIES E INTERESSES&nbsp;&nbsp;★&nbsp;&nbsp;ATUALIZADO EM 09 JUL 2026&nbsp;&nbsp;★&nbsp;&nbsp;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-body">
+    <div class="content-col">
+
+      <!-- QUEM SOU EU -->
+      <section class="panel" id="sobre">
+        <h2 class="panel-title"><span class="title-icon">◆</span> QUEM SOU EU</h2>
+        <div class="panel-body about-grid">
+          <div class="about-photo">
+            <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+              <rect width="140" height="140" fill="#3366CC"/>
+              <circle cx="70" cy="52" r="28" fill="#E4E4E4"/>
+              <path d="M20 130 Q70 78 120 130 Z" fill="#E4E4E4"/>
+            </svg>
+            <p class="photo-caption">Isaac<br><span>Developer &amp; Explorer</span></p>
+          </div>
+          <div class="about-text">
+            <p>Olá! Sou desenvolvedor e entusiasta de tecnologia, design e filosofia. Este portal é o meu universo digital pessoal — um espaço para reunir projetos, ideias e curiosidades em um único lugar, no estilo dos grandes portais que marcaram a web no início dos anos 2000.</p>
+            <p>Acredito que tecnologia e reflexão andam juntas: escrever código bem pensado exige tanto lógica quanto visão de mundo. Por isso, além de HTML, CSS, JavaScript e TypeScript, também dedico tempo a estudar filosofia, UX/UI e o universo de Open Finance.</p>
+            <ul class="about-facts">
+              <li><strong>Base:</strong> Rio de Janeiro, Brasil</li>
+              <li><strong>Foco:</strong> Front-end &amp; Product Engineering</li>
+              <li><strong>Motto:</strong> "Construir com propósito, aprender sempre."</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOBBIES -->
+      <section class="panel" id="hobbies">
+        <h2 class="panel-title"><span class="title-icon">◆</span> HOBBIES</h2>
+        <div class="panel-body cards-grid">
+          <div class="hobby-card">
+            <div class="card-icon-box">
+              <svg width="56" height="56" viewBox="0 0 56 56"><rect x="6" y="10" width="44" height="28" rx="2" fill="#0033A0" stroke="#FFCC00" stroke-width="2"/><rect x="10" y="14" width="36" height="20" fill="#8FB8FF"/><rect x="22" y="40" width="12" height="6" fill="#3366CC"/><rect x="16" y="46" width="24" height="4" fill="#0033A0"/></svg>
+            </div>
+            <h3>Programming</h3>
+            <p>Construindo interfaces e sistemas, linha por linha — do front-end ao back-end.</p>
+          </div>
+          <div class="hobby-card">
+            <div class="card-icon-box">
+              <svg width="56" height="56" viewBox="0 0 56 56"><rect x="10" y="8" width="14" height="40" fill="#3366CC" stroke="#0033A0" stroke-width="1.5"/><rect x="24" y="12" width="14" height="36" fill="#8FB8FF" stroke="#0033A0" stroke-width="1.5"/><rect x="38" y="10" width="10" height="38" fill="#FFCC00" stroke="#0033A0" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Philosophy</h3>
+            <p>Explorando ideias sobre existência, ética e tecnologia através da leitura.</p>
+          </div>
+          <div class="hobby-card">
+            <div class="card-icon-box">
+              <svg width="56" height="56" viewBox="0 0 56 56"><polygon points="28,6 46,16 46,36 28,50 10,36 10,16" fill="#0033A0" stroke="#FFCC00" stroke-width="2"/><circle cx="28" cy="26" r="9" fill="#FFCC00"/><rect x="24" y="34" width="8" height="12" fill="#8FB8FF"/></svg>
+            </div>
+            <h3>League of Legends</h3>
+            <p>Estratégia em equipe e reflexos rápidos — minha válvula de escape competitiva.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERESSES -->
+      <section class="panel" id="interesses">
+        <h2 class="panel-title"><span class="title-icon">◆</span> INTERESSES</h2>
+        <div class="panel-body cards-grid">
+          <div class="hobby-card">
+            <div class="card-icon-box">
+              <svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="20" fill="#0033A0" stroke="#FFCC00" stroke-width="2"/><circle cx="20" cy="22" r="4" fill="#8FB8FF"/><circle cx="36" cy="22" r="4" fill="#8FB8FF"/><path d="M18 36 Q28 44 38 36" stroke="#8FB8FF" stroke-width="3" fill="none"/></svg>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>Acompanhando a evolução de modelos e o impacto da IA na forma como criamos.</p>
+          </div>
+          <div class="hobby-card">
+            <div class="card-icon-box">
+              <svg width="56" height="56" viewBox="0 0 56 56"><rect x="8" y="8" width="40" height="40" rx="4" fill="#3366CC" stroke="#0033A0" stroke-width="2"/><rect x="14" y="14" width="12" height="12" fill="#FFCC00"/><rect x="30" y="14" width="12" height="6" fill="#E4E4E4"/><rect x="30" y="24" width="12" height="6" fill="#E4E4E4"/><rect x="14" y="30" width="28" height="6" fill="#E4E4E4"/></svg>
+            </div>
+            <h3>UX/UI</h3>
+            <p>Desenhando experiências claras, acessíveis e com personalidade visual própria.</p>
+          </div>
+          <div class="hobby-card">
+            <div class="card-icon-box">
+              <svg width="56" height="56" viewBox="0 0 56 56"><rect x="8" y="14" width="40" height="28" rx="2" fill="#0033A0" stroke="#FFCC00" stroke-width="2"/><path d="M12 34 L20 24 L28 30 L36 18 L44 26" stroke="#FFCC00" stroke-width="2.5" fill="none"/><circle cx="44" cy="26" r="2.5" fill="#FFCC00"/></svg>
+            </div>
+            <h3>Open Finance</h3>
+            <p>Estudando o futuro dos dados financeiros abertos e suas integrações via API.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURRICULO -->
+      <section class="panel" id="curriculo">
+        <h2 class="panel-title"><span class="title-icon">◆</span> CURRÍCULO :: SKILLS</h2>
+        <div class="panel-body">
+          <div class="skills-list">
+            <div class="skill-row">
+              <span class="skill-name">HTML</span>
+              <div class="skill-bar"><div class="skill-fill" style="--target:95%"></div></div>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">CSS</span>
+              <div class="skill-bar"><div class="skill-fill" style="--target:90%"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="--target:70%"></div></div>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">UI Design</span>
+              <div class="skill-bar"><div class="skill-fill" style="--target:80%"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+          </div>
+          <div class="cv-download">
+            <a href="#" class="btn-retro">⬇ DOWNLOAD CURRICULUM (PDF)</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="panel" id="projetos">
+        <h2 class="panel-title"><span class="title-icon">◆</span> PROJETOS</h2>
+        <div class="panel-body">
+          <div class="win-window">
+            <div class="win-titlebar">
+              <span>📁 C:\ISAAC\PROJETOS</span>
+              <span class="win-controls"><i></i><i></i><i></i></span>
+            </div>
+            <div class="win-menubar">Arquivo &nbsp; Editar &nbsp; Exibir &nbsp; Favoritos &nbsp; Ajuda</div>
+            <div class="win-body">
+              <div class="win-folder">
+                <span class="folder-icon">📁</span>
+                <span class="folder-name">Flu$o</span>
+                <span class="folder-desc">App de controle financeiro pessoal</span>
+              </div>
+              <div class="win-folder">
+                <span class="folder-icon">📁</span>
+                <span class="folder-name">Site BBB</span>
+                <span class="folder-desc">Hub de conteúdo e votação em tempo real</span>
+              </div>
+              <div class="win-folder">
+                <span class="folder-icon">📁</span>
+                <span class="folder-name">API Financeira</span>
+                <span class="folder-desc">Integração de dados via Open Finance</span>
+              </div>
+              <div class="win-folder">
+                <span class="folder-icon">📁</span>
+                <span class="folder-name">Design System</span>
+                <span class="folder-desc">Biblioteca de componentes reutilizáveis</span>
+              </div>
+            </div>
+            <div class="win-statusbar">4 objeto(s) &nbsp;|&nbsp; 1,4 MB</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="panel" id="contato">
+        <h2 class="panel-title"><span class="title-icon">◆</span> CONTATO</h2>
+        <div class="panel-body contact-grid">
+          <p>Quer trocar uma ideia, propor um projeto ou só bater um papo sobre tecnologia e filosofia? Me chama!</p>
+          <div class="contact-links">
+            <a href="mailto:contato@isaac.dev" class="btn-retro">✉ E-MAIL</a>
+            <a href="#" class="btn-retro">💼 LINKEDIN</a>
+            <a href="#" class="btn-retro">🐙 GITHUB</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="side-panel">
+        <h3 class="side-title">SYSTEM INFO</h3>
+        <ul class="side-list">
+          <li><span>Visitor Count</span><strong id="sideVisitor">000024581</strong></li>
+          <li><span>System Status</span><strong class="status-online">● ONLINE</strong></li>
+          <li><span>Latest Update</span><strong>09 JUL 2026</strong></li>
+          <li><span>Server Time</span><strong id="sideClock">00:00:00</strong></li>
+        </ul>
+      </div>
+      <div class="side-panel">
+        <h3 class="side-title">FAVORITE QUOTE</h3>
+        <p class="side-quote">"A tecnologia é melhor quando aproxima as pessoas."</p>
+      </div>
+      <div class="side-panel">
+        <h3 class="side-title">QUICK LINKS</h3>
+        <ul class="side-links">
+          <li><a href="#sobre">▸ Sobre mim</a></li>
+          <li><a href="#projetos">▸ Projetos</a></li>
+          <li><a href="#curriculo">▸ Currículo</a></li>
+          <li><a href="#contato">▸ Contato</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="#sobre">About</a>
+      <span>|</span>
+      <a href="#projetos">Projects</a>
+      <span>|</span>
+      <a href="#">GitHub</a>
+      <span>|</span>
+      <a href="#">LinkedIn</a>
+      <span>|</span>
+      <a href="#contato">Contact</a>
+      <span>|</span>
+      <a href="#">Privacy</a>
+    </div>
+    <p class="footer-copy">© 2026 ISAAC PORTAL — All rights reserved. &nbsp;|&nbsp; Version 1.0</p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">▲</button>
+
+<!-- WELCOME MODAL -->
+<div id="welcomeModal" class="welcome-modal">
+  <div class="welcome-box">
+    <div class="win-titlebar">
+      <span>💬 Mensagem do Sistema</span>
+      <span class="win-controls"><i></i><i></i><i></i></span>
+    </div>
+    <div class="welcome-body">
+      <p><strong>Bem-vindo ao ISAAC!</strong></p>
+      <p>Seu portal de conhecimento digital. Explore projetos, hobbies e interesses.</p>
+      <button id="closeWelcome" class="btn-retro">OK</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
