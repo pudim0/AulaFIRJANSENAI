@@ -3,409 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISAAC :: Your Digital Knowledge Universe</title>
-    <style>
-      :root {
-        --blue-deep: #001f5c;
-        --blue-strong: #0033a0;
-        --blue-mid: #3366cc;
-        --blue-light: #8fb8ff;
-        --blue-pale: #dce8ff;
-        --yellow: #ffcc00;
-        --yellow-dark: #cc9900;
-        --gray-bg: #e4e4e4;
-        --gray-panel: #f2f2f2;
-        --gray-line: #b7b7b7;
-        --ink: #1a1a1a;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        background: var(--gray-bg);
-        background-image:
-          linear-gradient(30deg, var(--gray-line) 1px, transparent 1px),
-          linear-gradient(150deg, var(--gray-line) 1px, transparent 1px),
-          linear-gradient(90deg, var(--gray-line) 1px, transparent 1px);
-        background-size: 52px 90px;
-        color: var(--ink);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 13px;
-        line-height: 1.6;
-      }
-      a {
-        color: #0000cc;
-      }
-      a:visited {
-        color: #660099;
-      }
-
-      /* header */
-      header {
-        background: var(--gray-panel);
-        border-bottom: 3px solid var(--blue-strong);
-        box-shadow: 0 2px 0 var(--blue-mid);
-      }
-      .header-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 14px 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .logo-title {
-        font-family: Impact, "Arial Black", sans-serif;
-        font-size: 32px;
-        color: var(--blue-strong);
-        letter-spacing: 2px;
-        text-shadow: 2px 2px 0 var(--yellow);
-        margin: 0;
-      }
-      .logo-tagline {
-        font-size: 10px;
-        letter-spacing: 2px;
-        color: var(--blue-mid);
-        font-weight: bold;
-      }
-      .visitor-chip {
-        background: var(--gray-bg);
-        border: 2px inset var(--gray-line);
-        padding: 6px 12px;
-        text-align: center;
-        font-family: "Courier New", monospace;
-      }
-      .visitor-chip span {
-        display: block;
-        font-size: 9px;
-        color: var(--blue-mid);
-        font-weight: bold;
-      }
-      .visitor-chip strong {
-        font-size: 16px;
-        color: var(--blue-deep);
-      }
-
-      nav {
-        background: linear-gradient(
-          180deg,
-          var(--blue-mid),
-          var(--blue-strong)
-        );
-        border-bottom: 3px solid var(--yellow);
-      }
-      nav ul {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 8px;
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-      }
-      nav a {
-        display: block;
-        padding: 10px 18px;
-        color: #fff;
-        font-weight: bold;
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-decoration: none;
-        border-right: 1px solid var(--blue-light);
-      }
-      nav a:visited {
-        color: #fff;
-      }
-      nav a:hover {
-        background: var(--yellow);
-        color: var(--blue-deep);
-      }
-
-      /* hero */
-      .hero {
-        background: radial-gradient(
-          ellipse at top,
-          var(--blue-mid) 0%,
-          var(--blue-deep) 70%
-        );
-        border-bottom: 4px solid var(--yellow);
-        text-align: center;
-        padding: 50px 16px;
-      }
-      .hero p.eyebrow {
-        color: var(--yellow);
-        font-family: "Courier New", monospace;
-        font-size: 12px;
-        letter-spacing: 3px;
-      }
-      .hero h1 {
-        font-family: Impact, "Arial Black", sans-serif;
-        font-size: 40px;
-        color: #fff;
-        margin: 10px 0;
-        text-shadow: 3px 3px 0 var(--blue-deep);
-      }
-      .hero p.sub {
-        color: var(--blue-pale);
-        font-weight: bold;
-        margin-bottom: 24px;
-      }
-      .btn-explore {
-        display: inline-block;
-        background: linear-gradient(180deg, #ffe066, var(--yellow-dark));
-        color: var(--blue-deep);
-        border: 3px outset var(--yellow);
-        padding: 12px 34px;
-        font-weight: bold;
-        font-size: 16px;
-        text-decoration: none;
-        letter-spacing: 1px;
-        box-shadow: 0 4px 0 #8a6a00;
-      }
-      .btn-explore:hover {
-        background: linear-gradient(180deg, #fff3b0, var(--yellow));
-      }
-
-      /* layout */
-      main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 24px 16px 40px;
-      }
-      .panel {
-        background: var(--gray-panel);
-        border: 2px solid var(--blue-strong);
-        box-shadow: 3px 3px 0 var(--blue-mid);
-        margin-bottom: 22px;
-        scroll-margin-top: 90px;
-      }
-      .panel h2 {
-        margin: 0;
-        background: linear-gradient(
-          180deg,
-          var(--blue-mid),
-          var(--blue-strong)
-        );
-        color: #fff;
-        font-size: 15px;
-        letter-spacing: 1px;
-        padding: 10px 16px;
-        border-bottom: 3px solid var(--yellow);
-      }
-      .panel-body {
-        padding: 18px;
-      }
-
-      /* about */
-      .about-grid {
-        display: flex;
-        gap: 100px;
-        flex-wrap: wrap;
-        align-items: flex-start;
-      }
-      .about-photo {
-        width: 400px;
-        height: 200px;
-        border: 2px inset var(--gray-line);
-        background: var(--blue-mid);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .about-photo svg {
-        width: 100%;
-      }
-      .about-text {
-        flex: 1;
-        min-width: 220px;
-      }
-
-      /* cards */
-      .cards {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-      }
-      .card {
-        flex: 1;
-        min-width: 150px;
-        background: #fff;
-        border: 2px solid var(--blue-mid);
-        box-shadow: 2px 2px 0 var(--gray-line);
-        padding: 14px;
-        text-align: center;
-      }
-      .card:hover {
-        border-color: var(--yellow-dark);
-      }
-      .card .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 8px;
-        font-size: 30px;
-      }
-
-      .hobby-icon {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-      .card h3 {
-        margin: 6px 0;
-        color: var(--blue-strong);
-        font-size: 13px;
-      }
-      .card p {
-        margin: 0;
-        font-size: 11px;
-        color: #444;
-      }
-
-      /* skills */
-      .skill-row {
-        display: grid;
-        grid-template-columns: 100px 1fr 40px;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-      .skill-name {
-        font-weight: bold;
-        color: var(--blue-strong);
-        font-size: 12px;
-      }
-      .skill-bar {
-        height: 14px;
-        background: #fff;
-        border: 2px inset var(--gray-line);
-        overflow: hidden;
-      }
-      .skill-fill {
-        height: 100%;
-        background: repeating-linear-gradient(
-          45deg,
-          var(--yellow),
-          var(--yellow) 8px,
-          var(--yellow-dark) 8px,
-          var(--yellow-dark) 16px
-        );
-      }
-      .skill-pct {
-        font-family: "Courier New", monospace;
-        font-size: 11px;
-        text-align: right;
-      }
-
-      /* projects */
-      .proj-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .proj-list li {
-        flex: 1;
-        min-width: 160px;
-        background: #fff;
-        border: 1px solid var(--gray-line);
-        padding: 10px;
-        text-align: center;
-        font-size: 12px;
-      }
-      .proj-list li strong {
-        display: block;
-        color: var(--blue-strong);
-        margin-bottom: 4px;
-      }
-
-      /* sidebar-ish info bar */
-      .info-strip {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        flex-wrap: wrap;
-        background: var(--blue-deep);
-        color: var(--blue-pale);
-        font-family: "Courier New", monospace;
-        font-size: 11px;
-        padding: 8px;
-        border-top: 2px solid var(--yellow);
-        border-bottom: 2px solid var(--yellow);
-        margin-bottom: 22px;
-      }
-      .info-strip strong {
-        color: var(--yellow);
-      }
-      .status-online {
-        color: #66ff66;
-        font-weight: bold;
-      }
-
-      footer {
-        background: var(--blue-deep);
-        color: var(--blue-pale);
-        text-align: center;
-        padding: 16px;
-        border-top: 4px solid var(--yellow);
-        font-size: 11px;
-      }
-      footer a {
-        color: var(--blue-light);
-        text-decoration: none;
-      }
-      footer a:hover {
-        color: var(--yellow);
-      }
-
-      .back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 42px;
-        height: 42px;
-        background: var(--blue-strong);
-        color: var(--yellow);
-        border: 2px outset var(--blue-light);
-        font-size: 16px;
-        cursor: pointer;
-        display: none;
-      }
-      .back-to-top.show {
-        display: block;
-      }
-
-      @media (max-width: 600px) {
-        .hero h1 {
-          font-size: 28px;
-        }
-        .about-grid {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>ISAAC</title>
   </head>
   <body>
+    <!-- BACKGROUND DE VÍDEO (YouTube) -->
+    <div class="video-background">
+      <div class="video-overlay"></div>
+      <iframe
+        id="ytBackground"
+        src="https://www.youtube.com/embed/3fq7re6c_5w?autoplay=1&mute=1&loop=1&playlist=3fq7re6c_5w&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+        title="Background video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+
     <div class="info-strip">
       <span>🕐 <span id="clock">00:00:00</span></span>
       <span>Última atualização: <strong>09 JUL 2026</strong></span>
       <span class="status-online">● SYSTEM ONLINE</span>
     </div>
 
+    
     <header>
       <div class="header-inner">
         <div>
           <p class="logo-title">ISAAC</p>
-          <p class="logo-tagline"><YOUR DIGITAL KNOWLEDGE UNIVERSE></p>
+          <p class="logo-tagline"></p>
+          <p>YOUR DIGITAL KNOWLEDGE UNIVERSE</p>
         </div>
         <div class="visitor-chip">
           <span>VISITORS</span>
@@ -426,7 +53,9 @@
 
     <section class="hero" id="top">
       <p class="eyebrow">:: PORTAL DE CONHECIMENTO DIGITAL ::</p>
-      <h1><img src="Graphicdesign.png" alt="Logo" width="300" height="300" /></h1>
+      <h1>
+        <img src="/HTML/Aula04/imgs-for-landing/Graphicdesign.png" alt="Logo" width="300" height="300" />
+      </h1>
       <p class="sub">
         Desenvolvimento Web • Geopolítica • Filosofia • Tecnologia • Projetos
       </p>
@@ -443,7 +72,7 @@
           <div class="about-photo" style="flex: 0 0 auto">
             <img
               class="profile-photo"
-              src="mclovin.png"
+              src="/HTML/Aula04/imgs-for-landing/mclovin.png"
               alt="Foto de perfil"
               width="400"
               height="200"
@@ -469,21 +98,21 @@
         <div class="panel-body cards">
           <div class="card">
             <div class="icon">
-              <img class="hobby-icon" src="computaria.jpg" alt="Dev" />
+              <img class="hobby-icon" src="/HTML/Aula04/imgs-for-landing/computaria.jpg" alt="Dev" />
             </div>
-             <h3>Computaria</h3>
+            <h3>Computaria</h3>
             <p>Do front-end ao back-end.</p>
           </div>
           <div class="card">
             <div class="icon">
-              <img class="hobby-icon" src="clovis.jpg" alt="Diana" />
+              <img class="hobby-icon" src="/HTML/Aula04/imgs-for-landing/clovis.jpg" alt="Diana" />
             </div>
-             <h3>Filosofia</h3>
+            <h3>Filosofia</h3>
             <p>Ideias sobre existência e ética.</p>
           </div>
           <div class="card">
             <div class="icon">
-              <img class="hobby-icon" src="Diana.jpg" alt="Diana" />
+              <img class="hobby-icon" src="/HTML/Aula04/imgs-for-landing/diana.jpg" alt="Diana" />
             </div>
             <h3>League of Legends</h3>
             <p>Estratégia e reflexos rápidos.</p>
@@ -551,10 +180,10 @@
         <div class="panel-body">
           <ul class="proj-list">
             <li>📁<strong>Flu$o</strong>Controle financeiro pessoal</li>
-            <li>📁<strong>Site BBB</strong>Site de compra e venda da biqueira</li>
             <li>
-              📁<strong>Snake Game</strong>Joguinho da cobrinha em HTML
+              📁<strong>Site BBB</strong>Site de compra e venda da biqueira
             </li>
+            <li>📁<strong>Snake Game</strong>Joguinho da cobrinha em HTML</li>
             <li>📁<strong>Design System</strong>Biblioteca de componentes</li>
           </ul>
         </div>
@@ -566,8 +195,9 @@
           <p>Quer trocar uma ideia ou propor um projeto? Me chama!</p>
           <p>
             <a href="mailto:contato@isaac.dev">✉ E-mail</a> &nbsp;|&nbsp;
-            <a href="#">💼 LinkedIn</a> &nbsp;|&nbsp;
-            <a href="#">🐙 GitHub</a>
+            <a href="https://www.linkedin.com/in/isaacmoreira1/">💼 LinkedIn</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/pudim0">🐙 GitHub</a>
           </p>
         </div>
       </section>

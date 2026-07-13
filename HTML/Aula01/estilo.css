@@ -1,13 +1,51 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/* ==========================================================
+   RESET
+   Remove estilos padrões aplicados pelo navegador
+========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto;
-  width: 120px;
-  border-radius: 8px;
+/* ==========================================================
+   BODY
+   Configurações gerais da página
+========================================================== */
+
+body {
+  position: relative;
+  background-color: #1f7308;
+  color: #fff;
 }
+
+/* ==========================================================
+   FUNDO DECORATIVO
+   Pseudo-elemento responsável pela estampa do fundo.
+   A opacidade é aplicada somente na imagem, sem afetar
+   o restante da página.
+========================================================== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("pattern.svg");
+  background-repeat: repeat;
+  background-size: 180px;
+
+  opacity: 0.08;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ==========================================================
+   LAYOUT PRINCIPAL
+   Centraliza o conteúdo da página
+========================================================== */
 
 header,
 main,
@@ -17,63 +55,156 @@ footer {
   padding: 1rem;
 }
 
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
 h1 {
   text-align: center;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  text-align: center;
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a {
+  color: #fff;
+  text-decoration: underline;
 }
+
+/* Remove o sublinhado apenas dos links do menu */
 
 nav a {
   text-decoration: none;
 }
 
-article,
-h2,
-table {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  margin: 0 auto 1rem auto;
-  border-radius: 8px;
-  text-align: center;
-  display: block;
-  width: 80%;
-  max-width: 600px; /* era 1000px no primeiro bloco */
+/* Efeito ao passar o mouse */
+
+a:hover {
+  text-decoration: underline;
 }
 
-table {
-  border-collapse: collapse;
-  width: 80%;
+/* ==========================================================
+   MENU DE NAVEGAÇÃO
+========================================================== */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+  list-style: none;
+  text-align: center;
 }
+
+/* ==========================================================
+   SEÇÕES
+   Estilização dos títulos das seções
+========================================================== */
+
+section h2 {
+  width: 80%;
+  max-width: 600px;
+
+  margin: 0 auto 1rem;
+  padding: 1rem;
+
+  text-align: center;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   CARDS DE PRODUTOS
+========================================================== */
+
+article {
+  width: 80%;
+  max-width: 600px;
+
+  margin: 0 auto 1rem;
+  padding: 1rem;
+
+  text-align: center;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   TABELA DE HORÁRIOS
+========================================================== */
+
+table {
+  width: 80%;
+  max-width: 600px;
+
+  margin: 0 auto 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  border-collapse: collapse;
+
+  text-align: center;
+}
+
+/* Espaçamento interno das células */
 
 th,
 td {
-  padding: 0.75rem;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
+
+/* Linha separadora entre registros */
 
 tbody tr {
   border-bottom: 1px solid #ccc;
 }
 
+/* Remove a borda da última linha */
+
 tbody tr:last-child {
   border-bottom: none;
 }
 
+/* Título da tabela */
+
+caption {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
 hr {
   width: 80%;
   max-width: 600px;
+
   margin: 2rem auto;
+
   border: none;
   border-top: 2px solid #ccc;
 }
 
+/* ==========================================================
+   RODAPÉ
+========================================================== */
+
 footer {
   text-align: center;
 }
-

@@ -1,105 +1,145 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
+    <!-- Configurações da página -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="estilo.css" />
 
     <title>BBB: Bom, Barato e Bolado</title>
-    
   </head>
 
   <body>
-    <header id="Header">
+    <!-- ======================================================
+       CABEÇALHO
+       Logo, título e menu de navegação
+  ======================================================= -->
+
+    <header id="header">
+      <!-- Logo da empresa -->
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg/500px-Snoop_Dogg_2019_by_Glenn_Francis.jpg"
         alt="Retrato de Snoop Dogg"
         class="logo"
       />
 
+      <!-- Nome da empresa -->
       <h1>Bom, Barato e Bolado</h1>
+
       <hr />
 
+      <!-- Navegação principal -->
       <nav aria-label="Menu principal">
         <ul>
           <li>
-            <a href="#" aria-current="page"
-              ><b><u>Home</u></b></a
-            >
+            <a href="#" aria-current="page">
+              <strong>Home</strong>
+            </a>
           </li>
+
           <li>
-            <a href="/HTML/Aula01/Produtos.html">Produtos</a>
+            <a href="/HTML/Aula01/Produtos.html"> Produtos </a>
           </li>
+
           <li>
-            <a href="#">Cupons</a>
+            <a href="#"> Cupons </a>
           </li>
+
           <li>
-            <a href="#Contato">Contato</a>
+            <a href="#contato"> Contato </a>
           </li>
         </ul>
       </nav>
     </header>
 
+    <!-- ======================================================
+       CONTEÚDO PRINCIPAL
+  ======================================================= -->
+
     <main>
+      <!-- Destaque da página -->
       <section aria-labelledby="destaque">
         <h2 id="destaque">
-          <a href="snoopdog.html">Snoop Dogg investe nessa página!</a>
+          <a href="snoopdog.html"> Snoop Dogg investe nessa página! </a>
         </h2>
+      </section>
 
-        <h2>Produtos em destaque</h2>
+      <!-- Produtos em destaque -->
+      <section aria-labelledby="produtos">
+        <h2 id="produtos">Produtos em destaque</h2>
 
         <article>
           <h3>Beck</h3>
+
           <p>Beck clássico do dia a dia.</p>
         </article>
 
         <article>
           <h3>Malbeck</h3>
+
           <p>
-            O beck cheiroso pra quem não quer ficar com cheiro de maconha depois
-            de fumar 1.
+            O beck cheiroso para quem não quer ficar com cheiro de maconha
+            depois de fumar.
           </p>
         </article>
 
         <article>
-          <h3>Pó de 5</h3>
-          <p>Pra dar aquele raio curtinho.</p>
+          <h3>Bong</h3>
+
+          <p>Ficar um pouco alto é bom às vezes.</p>
         </article>
       </section>
+
+      <!-- Horário de funcionamento -->
+      <section aria-labelledby="horario">
+
+        <table class="horario-funcionamento">
+          <caption>
+            Horário de atendimento da loja
+          </caption>
+
+          <thead>
+            <tr>
+              <th></th>
+              <th>Manhã</th>
+              <th>Tarde</th>
+              <th>Noite</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>Quarta a Sexta</th>
+              <td>10:00 - 12:00</td>
+              <td>16:00 - 18:00</td>
+              <td>18:00 - 03:00</td>
+            </tr>
+
+            <tr>
+              <th>Sábado e Domingo</th>
+              <td>07:00 - 12:00</td>
+              <td>16:00 - 18:00</td>
+              <td>18:00 - 05:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
-    <h4>
-      <table class="horario-funcionamento">
-        <thead>
-          <th colspan="4">Horário de Funcionamento</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <th>Manhã</th>
-            <th>Tarde</th>
-            <th>Noite</th>
-          </tr>
-          <tr>
-            <th>Quarta a Sexta</th>
-            <td>10:00 - 12:00</td>
-            <td>16:00 - 18:00</td>
-            <td>18:00 - 03:00</td>
-          </tr>
-          <tr>
-            <th>Sábado e Domingo</th>
-            <td>7:00 - 12:00</td>
-            <td>16:00 - 18:00</td>
-            <td>18:00 - 05:00</td>
-          </tr>
-        </tbody>
-      </table>
-    </h4>
-    <footer id="Contato">
+
+    <!-- ======================================================
+       RODAPÉ
+       Informações de contato
+  ======================================================= -->
+
+    <footer id="contato">
       <p>&copy; 2026 Bom, Barato e Bolado</p>
+
       <p>Contato: (21) 99985-2931</p>
 
       <p>
-        <a href="#Header">Voltar ao topo</a>
+        <a href="#header"> Voltar ao topo </a>
       </p>
     </footer>
   </body>
