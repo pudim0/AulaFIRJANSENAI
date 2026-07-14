@@ -3,250 +3,524 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <title>ISAAC</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Portfólio de Isaac - Desenvolvimento Web, Filosofia, Tecnologia e Projetos."
+    />
+
+    <title>ISAAC | Digital Knowledge Universe</title>
   </head>
+
   <body>
-    <!-- BACKGROUND DE VÍDEO (YouTube) -->
+    <!-- ========================================================= -->
+    <!-- BACKGROUND -->
+    <!-- ========================================================= -->
+
     <div class="video-background">
-      <div class="video-overlay"></div>
-      <iframe
-        id="ytBackground"
-        src="https://www.youtube.com/embed/3fq7re6c_5w?autoplay=1&mute=1&loop=1&playlist=3fq7re6c_5w&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
-        title="Background video"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-      ></iframe>
-    </div>
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline>
+
+        <source
+            src="/HTML/Aula04/imgs-for-landing/matrix.mp4"
+            type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+</div>
+
+    <!-- ========================================================= -->
+    <!-- BARRA SUPERIOR -->
+    <!-- ========================================================= -->
 
     <div class="info-strip">
-      <span>🕐 <span id="clock">00:00:00</span></span>
-      <span>Última atualização: <strong>09 JUL 2026</strong></span>
-      <span class="status-online">● SYSTEM ONLINE</span>
+      <span>
+        🕐
+        <span id="clock">00:00:00</span>
+      </span>
+
+      <span>
+        Última atualização:
+        <strong><div id="current_date"></div></strong>
+      </span>
+
+      <span class="status-online"> ● SYSTEM ONLINE </span>
     </div>
 
-    
+    <!-- ========================================================= -->
+    <!-- CABEÇALHO -->
+    <!-- ========================================================= -->
+
     <header>
       <div class="header-inner">
-        <div>
-          <p class="logo-title">ISAAC</p>
-          <p class="logo-tagline"></p>
-          <p>YOUR DIGITAL KNOWLEDGE UNIVERSE</p>
+        <div class="logo">
+          <h1 class="logo-title">ISAAC</h1>
+
+          <p class="logo-tagline">YOUR DIGITAL KNOWLEDGE UNIVERSE</p>
         </div>
+
         <div class="visitor-chip">
           <span>VISITORS</span>
-          <strong id="visitorCount">000024581</strong>
+
+          <strong id="visitorCount"> 000024581 </strong>
         </div>
       </div>
-      <nav>
+
+      <!-- Navegação -->
+
+      <nav aria-label="Navegação Principal">
         <ul>
-          <li><a href="#top">HOME</a></li>
-          <li><a href="#curriculo">CURRÍCULO</a></li>
-          <li><a href="#hobbies">HOBBIES</a></li>
-          <li><a href="#interesses">INTERESSES</a></li>
-          <li><a href="#projetos">PROJETOS</a></li>
-          <li><a href="#contato">CONTATO</a></li>
+          <li>
+            <a href="#top"> HOME </a>
+          </li>
+
+          <li>
+            <a href="#curriculo"> CURRÍCULO </a>
+          </li>
+
+          <li>
+            <a href="#hobbies"> HOBBIES </a>
+          </li>
+
+          <li>
+            <a href="#interesses"> INTERESSES </a>
+          </li>
+
+          <li>
+            <a href="#projetos"> PROJETOS </a>
+          </li>
+
+          <li>
+            <a href="#contato"> CONTATO </a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <!-- ========================================================= -->
+    <!-- HERO -->
+    <!-- ========================================================= -->
+
     <section class="hero" id="top">
       <p class="eyebrow">:: PORTAL DE CONHECIMENTO DIGITAL ::</p>
-      <h1>
-        <img src="/HTML/Aula04/imgs-for-landing/Graphicdesign.png" alt="Logo" width="300" height="300" />
-      </h1>
+
+      <img
+        src="/HTML/Aula04/imgs-for-landing/Graphicdesign.png"
+        alt="Logo Isaac"
+        width="300"
+        height="300"
+      />
+
+      <h2>Bem-vindo ao meu universo digital</h2>
+
       <p class="sub">
         Desenvolvimento Web • Geopolítica • Filosofia • Tecnologia • Projetos
       </p>
-      <a href="#sobre" class="btn-explore">▶ EXPLORE NOW</a>
+
+      <a class="btn-explore" href="#sobre"> ▶ EXPLORE NOW </a>
     </section>
 
+    <!-- ========================================================= -->
+    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- ========================================================= -->
+
     <main>
+      <!-- ===================================== -->
+      <!-- SOBRE -->
+      <!-- ===================================== -->
+
       <section class="panel" id="sobre">
         <h2>◆ QUEM SOU EU</h2>
-        <div
-          class="panel-body about-grid"
-          style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap"
-        >
-          <div class="about-photo" style="flex: 0 0 auto">
-            <img
-              class="profile-photo"
-              src="/HTML/Aula04/imgs-for-landing/mclovin.png"
-              alt="Foto de perfil"
-              width="400"
-              height="200"
-              style="border-radius: 10px; display: block"
-            />
-          </div>
-          <div class="about-text" style="flex: 1 1 260px; min-width: 220px">
-            <p>
-              Olá! Sou desenvolvedor e entusiasta de tecnologia, geopolítica e
-              filosofia. Este portal é o meu universo digital pessoal, no estilo
-              dos grandes portais que marcaram a web no início dos anos 2000.
-            </p>
-            <p>
-              <strong>Base:</strong> Rio de Janeiro, Brasil &nbsp;|&nbsp;
-              <strong>Foco:</strong> Back-end &amp; Product Engineering
-            </p>
+
+        <div class="panel-body">
+          <div class="about-grid">
+            <figure class="about-photo">
+              <img
+                class="profile-photo"
+                src="/HTML/Aula04/imgs-for-landing/mclovin.png"
+                alt="Foto de Isaac"
+                width="400"
+                height="200"
+              />
+            </figure>
+
+            <article class="about-text">
+              <p>
+                Olá! Sou desenvolvedor e entusiasta de tecnologia, geopolítica e
+                filosofia. Este portal representa meu espaço pessoal inspirado
+                nos grandes sites da internet dos anos 2000.
+              </p>
+
+              <p>
+                <strong>Base:</strong>
+                Rio de Janeiro, Brasil
+
+                <br />
+
+                <strong>Especialidade:</strong>
+                Desenvolvimento Back-end, Engenharia de Produto e
+                Desenvolvimento Web.
+              </p>
+            </article>
           </div>
         </div>
       </section>
+
+      <!-- ===================================== -->
+      <!-- HOBBIES -->
+      <!-- ===================================== -->
 
       <section class="panel" id="hobbies">
         <h2>◆ HOBBIES</h2>
+
         <div class="panel-body cards">
-          <div class="card">
+          <article class="card">
             <div class="icon">
-              <img class="hobby-icon" src="/HTML/Aula04/imgs-for-landing/computaria.jpg" alt="Dev" />
+              <img
+                class="hobby-icon"
+                src="/HTML/Aula04/imgs-for-landing/computaria.jpg"
+                alt="Programação"
+              />
             </div>
-            <h3>Computaria</h3>
-            <p>Do front-end ao back-end.</p>
-          </div>
-          <div class="card">
+
+            <h3>Programação</h3>
+
+            <p>
+              Do Front-end ao Back-end, transformando ideias em aplicações
+              reais.
+            </p>
+          </article>
+
+          <article class="card">
             <div class="icon">
-              <img class="hobby-icon" src="/HTML/Aula04/imgs-for-landing/clovis.jpg" alt="Diana" />
+              <img
+                class="hobby-icon"
+                src="/HTML/Aula04/imgs-for-landing/clovis.jpg"
+                alt="Filosofia"
+              />
             </div>
+
             <h3>Filosofia</h3>
-            <p>Ideias sobre existência e ética.</p>
-          </div>
-          <div class="card">
+
+            <p>Estudos sobre ética, existência, lógica e grandes pensadores.</p>
+          </article>
+
+          <article class="card">
             <div class="icon">
-              <img class="hobby-icon" src="/HTML/Aula04/imgs-for-landing/diana.jpg" alt="Diana" />
+              <img
+                class="hobby-icon"
+                src="/HTML/Aula04/imgs-for-landing/diana.jpg"
+                alt="League of Legends"
+              />
             </div>
+
             <h3>League of Legends</h3>
-            <p>Estratégia e reflexos rápidos.</p>
-          </div>
+
+            <p>Estratégia, competitividade e melhoria contínua.</p>
+          </article>
         </div>
       </section>
+
+      <!-- ===================================== -->
+      <!-- INTERESSES -->
+      <!-- ===================================== -->
 
       <section class="panel" id="interesses">
         <h2>◆ INTERESSES</h2>
+
         <div class="panel-body cards">
-          <div class="card">
+          <article class="card">
             <div class="icon">🤖</div>
-            <h3>Artificial Intelligence</h3>
-            <p>Evolução dos modelos de IA.</p>
-          </div>
-          <div class="card">
+
+            <h3>Inteligência Artificial</h3>
+
+            <p>
+              IA aplicada à automação, produtividade e desenvolvimento de
+              software.
+            </p>
+          </article>
+
+          <article class="card">
             <div class="icon">🎨</div>
-            <h3>UX/UI</h3>
-            <p>Experiências claras e acessíveis.</p>
-          </div>
-          <div class="card">
+
+            <h3>UX/UI Design</h3>
+
+            <p>
+              Interfaces intuitivas e experiências digitais de alta qualidade.
+            </p>
+          </article>
+
+          <article class="card">
             <div class="icon">💹</div>
+
             <h3>Open Finance</h3>
-            <p>Dados financeiros abertos via API.</p>
-          </div>
+
+            <p>APIs bancárias, integração financeira e automação de dados.</p>
+          </article>
         </div>
       </section>
+
+      <!-- ===================================== -->
+      <!-- CURRÍCULO -->
+      <!-- ===================================== -->
 
       <section class="panel" id="curriculo">
         <h2>◆ CURRÍCULO :: SKILLS</h2>
+
         <div class="panel-body">
           <div class="skill-row">
-            <span class="skill-name">HTML</span>
+            <span class="skill-name"> HTML </span>
+
             <div class="skill-bar">
               <div class="skill-fill" style="width: 50%"></div>
             </div>
-            <span class="skill-pct">50%</span>
+
+            <span class="skill-pct"> 50% </span>
           </div>
+
           <div class="skill-row">
-            <span class="skill-name">CSS</span>
+            <span class="skill-name"> CSS </span>
+
             <div class="skill-bar">
               <div class="skill-fill" style="width: 30%"></div>
             </div>
-            <span class="skill-pct">30%</span>
+
+            <span class="skill-pct"> 30% </span>
           </div>
+
           <div class="skill-row">
-            <span class="skill-name">JavaScript</span>
+            <span class="skill-name"> JavaScript </span>
+
             <div class="skill-bar">
               <div class="skill-fill" style="width: 75%"></div>
             </div>
-            <span class="skill-pct">75%</span>
+
+            <span class="skill-pct"> 75% </span>
           </div>
+
           <div class="skill-row">
-            <span class="skill-name">TypeScript</span>
+            <span class="skill-name"> TypeScript </span>
+
             <div class="skill-bar">
               <div class="skill-fill" style="width: 70%"></div>
             </div>
-            <span class="skill-pct">70%</span>
+
+            <span class="skill-pct"> 70% </span>
           </div>
         </div>
       </section>
 
+      <!-- ===================================== -->
+      <!-- PROJETOS -->
+      <!-- ===================================== -->
+
       <section class="panel" id="projetos">
         <h2>◆ PROJETOS</h2>
+
         <div class="panel-body">
           <ul class="proj-list">
-            <li>📁<strong>Flu$o</strong>Controle financeiro pessoal</li>
             <li>
-              📁<strong>Site BBB</strong>Site de compra e venda da biqueira
+              <strong> 📁 Flu$o </strong>
+
+              Plataforma de organização financeira integrada ao Open Finance com
+              recursos de Inteligência Artificial.
             </li>
-            <li>📁<strong>Snake Game</strong>Joguinho da cobrinha em HTML</li>
-            <li>📁<strong>Design System</strong>Biblioteca de componentes</li>
+
+            <li>
+              <strong> 📁 BBB </strong>
+
+              Marketplace desenvolvido para estudos de HTML, CSS e JavaScript.
+            </li>
+
+            <li>
+              <strong> 📁 Snake Game </strong>
+
+              Recriação do clássico jogo da cobrinha utilizando HTML, CSS e
+              JavaScript.
+            </li>
+
+            <li>
+              <strong> 📁 Design System </strong>
+
+              Biblioteca de componentes reutilizáveis para aplicações web
+              modernas.
+            </li>
           </ul>
         </div>
       </section>
 
+      <!-- ===================================== -->
+      <!-- CONTATO -->
+      <!-- ===================================== -->
+
       <section class="panel" id="contato">
         <h2>◆ CONTATO</h2>
+
         <div class="panel-body">
-          <p>Quer trocar uma ideia ou propor um projeto? Me chama!</p>
           <p>
-            <a href="mailto:contato@isaac.dev">✉ E-mail</a> &nbsp;|&nbsp;
-            <a href="https://www.linkedin.com/in/isaacmoreira1/">💼 LinkedIn</a>
-            &nbsp;|&nbsp;
-            <a href="https://github.com/pudim0">🐙 GitHub</a>
+            Gostou do meu trabalho ou quer conversar sobre tecnologia,
+            desenvolvimento ou novos projetos?
           </p>
+
+          <p>Entre em contato através de uma das plataformas abaixo.</p>
+
+          <nav class="contact-links" aria-label="Links de contato">
+            <a href="mailto:contato@isaac.dev" aria-label="Enviar e-mail">
+              ✉ E-mail
+            </a>
+
+            <span>|</span>
+
+            <a
+              href="https://www.linkedin.com/in/isaacmoreira1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              💼 LinkedIn
+            </a>
+
+            <span>|</span>
+
+            <a
+              href="https://github.com/pudim0"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              🐙 GitHub
+            </a>
+          </nav>
         </div>
       </section>
     </main>
 
+    <!-- ===================================== -->
+    <!-- RODAPÉ -->
+    <!-- ===================================== -->
+
     <footer>
-      <p>
-        <a href="#sobre">About</a> | <a href="#projetos">Projects</a> |
-        <a href="#">GitHub</a> | <a href="#">LinkedIn</a> |
-        <a href="#contato">Contact</a>
-      </p>
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <a href="#sobre"> About </a>
+
+        <span>|</span>
+
+        <a href="#curriculo"> Skills </a>
+
+        <span>|</span>
+
+        <a href="#projetos"> Projects </a>
+
+        <span>|</span>
+
+        <a href="#contato"> Contact </a>
+      </nav>
+
       <p>© 2026 ISAAC PORTAL — Version 1.0</p>
     </footer>
 
-    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <!-- ===================================== -->
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <!-- ===================================== -->
+
+    <button
+      id="backToTop"
+      class="back-to-top"
+      type="button"
+      aria-label="Voltar ao topo"
+    >
       ▲
     </button>
 
+    <!-- ===================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ===================================== -->
+
     <script>
+    // <!-- ===================================== -->
+    // <!-- Data atual -->
+    // <!-- ===================================== -->
+
+date = new Date();
+year = date.getFullYear();
+month = date.getMonth() + 1;
+day = date.getDate();
+document.getElementById("current_date").innerHTML = day + "/" + month + "/  " + year;
+
+      /* =====================================
+           RELÓGIO DIGITAL
+        ===================================== */
+
       function updateClock() {
         const now = new Date();
-        const t = [now.getHours(), now.getMinutes(), now.getSeconds()]
-          .map((n) => String(n).padStart(2, "0"))
+
+        const time = [now.getHours(), now.getMinutes(), now.getSeconds()]
+          .map((number) => String(number).padStart(2, "0"))
           .join(":");
-        document.getElementById("clock").textContent = t;
+
+        document.getElementById("clock").textContent = time;
       }
+
       updateClock();
+
       setInterval(updateClock, 1000);
 
-      const target = 24581 + Math.floor(Math.random() * 40);
-      let current = 0;
-      const el = document.getElementById("visitorCount");
-      const step = Math.max(1, Math.floor(target / 50));
-      const counter = setInterval(() => {
-        current += step;
-        if (current >= target) {
-          current = target;
-          clearInterval(counter);
+      /* =====================================
+           CONTADOR DE VISITAS
+        ===================================== */
+
+      const visitorElement = document.getElementById("visitorCount");
+
+      const targetVisitors = 24581 + Math.floor(Math.random() * 40);
+
+      let currentVisitors = 0;
+
+      const increment = Math.max(1, Math.floor(targetVisitors / 50));
+
+      const visitorAnimation = setInterval(() => {
+        currentVisitors += increment;
+
+        if (currentVisitors >= targetVisitors) {
+          currentVisitors = targetVisitors;
+
+          clearInterval(visitorAnimation);
         }
-        el.textContent = String(current).padStart(9, "0");
+
+        visitorElement.textContent = String(currentVisitors).padStart(9, "0");
       }, 20);
 
-      const backToTop = document.getElementById("backToTop");
-      window.addEventListener("scroll", () => {
-        backToTop.classList.toggle("show", window.scrollY > 400);
+      /* =====================================
+           BOTÃO VOLTAR AO TOPO
+        ===================================== */
+
+      const backToTopButton = document.getElementById("backToTop");
+
+      function toggleBackToTopButton() {
+        if (window.scrollY > 400) {
+          backToTopButton.classList.add("show");
+        } else {
+          backToTopButton.classList.remove("show");
+        }
+      }
+
+      window.addEventListener("scroll", toggleBackToTopButton);
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
-      backToTop.addEventListener("click", () =>
-        window.scrollTo({ top: 0, behavior: "smooth" }),
-      );
     </script>
   </body>
 </html>
