@@ -1,31 +1,32 @@
 /* ==========================================================
    ISAAC PORTAL & CURRÍCULO
-   style.css (Arquivo Único Unificado)
+   style.css (Arquivo Único Unificado - Versão Purple & Gold Dark)
    ========================================================== */
 
 /* ==========================================================
-   DESIGN TOKENS
+   DESIGN TOKENS (Sua nova paleta de cores)
    ========================================================== */
 :root {
-  /* Blues */
-  --blue-deep: #001f5c;
-  --blue-strong: #0033a0;
-  --blue-mid: #3366cc;
-  --blue-light: #8fb8ff;
-  --blue-pale: #dce8ff;
-  --blue-baby: #79c5f9;
+  /* Purple */
+  --purple-deep: #7030a0;
+  --purple-strong: #7d2ba6;
+  --purple-mid: #8c25ac;
+  --purple-light: #a351bd;
+  --purple-pale: #d9b8e8;
+  --purple-bright: #a91ab9;
 
-  /* Yellow */
-  --yellow: #ffcc00;
-  --yellow-dark: #cc9900;
+  /* Gold */
+  --gold: #c2a37a;
+  --gold-dark: #a06f30;
 
   /* Gray */
-  --gray-bg: #e4e4e4;
-  --gray-panel: #f2f2f2;
-  --gray-line: #b7b7b7;
+  --gray-bg: #171717;
+  --gray-panel: #232323;
+  --gray-line: #3a3a3a;
 
   /* Text */
-  --ink: #1a1a1a;
+  --ink: #f5f5f5;
+  --ink-secondary: #bdbdbd;
 }
 
 /* ==========================================================
@@ -47,19 +48,19 @@ body {
   font-size: 13px;
   line-height: 1.6;
   color: var(--ink);
-  background: transparent;
+  background: var(--gray-bg);
   position: relative;
 }
 
 body.resume-body {
   background:
-    linear-gradient(rgba(0, 31, 92, 0.06), rgba(0, 31, 92, 0.06)),
+    linear-gradient(rgba(112, 48, 160, 0.08), rgba(112, 48, 160, 0.08)),
     repeating-linear-gradient(
       45deg,
       var(--gray-bg),
       var(--gray-bg) 22px,
-      #ececec 22px,
-      #ececec 44px
+      var(--gray-panel) 22px,
+      var(--gray-panel) 44px
     );
 }
 
@@ -70,18 +71,17 @@ img {
 }
 
 a {
-  color: #0000cc;
+  color: var(--purple-light);
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--purple-pale);
 }
 
 a:visited {
-  color: #660099;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  color: var(--purple-pale);
 }
 
 /* ---------- voltar ao portal (currículo) ---------- */
@@ -89,23 +89,21 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin: 14px auto 0;
   padding: 6px 14px;
   width: fit-content;
   font-family: "Courier New", monospace;
-  font-size: 11px;
   font-weight: bold;
-  color: var(--blue-pale);
-  background: rgba(0, 31, 92, 0.85);
-  border: 2px outset var(--blue-light);
+  color: var(--purple-pale);
+  background: rgba(112, 48, 160, 0.85);
+  border: 2px outset var(--purple-light);
 }
 
 .back-link:hover {
-  background: var(--blue-mid);
+  background: var(--purple-mid);
 }
 
 .back-link:visited {
-  color: var(--blue-pale);
+  color: var(--purple-pale);
 }
 
 /* ==========================================================
@@ -122,12 +120,18 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  inverted-colors: invert(100%);
 }
 
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.65
+  ); /* Escurecido um pouco mais para o Dark Mode */
 }
 
 /* ==========================================================
@@ -140,16 +144,16 @@ ul {
   flex-wrap: wrap;
   gap: 24px;
   padding: 8px;
-  background: rgba(0, 31, 92, 0.85);
-  border-top: 2px solid var(--yellow);
-  border-bottom: 2px solid var(--yellow);
-  color: var(--blue-pale);
+  background: rgba(112, 48, 160, 0.85);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  color: var(--purple-pale);
   font-family: "Courier New", monospace;
   font-size: 11px;
 }
 
 .info-strip strong {
-  color: var(--yellow);
+  color: var(--gold);
 }
 
 .status-online {
@@ -164,26 +168,26 @@ ul {
   flex-wrap: wrap;
   gap: 20px;
   padding: 8px;
-  background: rgba(0, 31, 92, 0.85);
-  border-top: 2px solid var(--yellow);
-  border-bottom: 2px solid var(--yellow);
-  color: var(--blue-pale);
+  background: rgba(112, 48, 160, 0.85);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  color: var(--purple-pale);
   font-family: "Courier New", monospace;
   font-size: 11px;
 }
 
 .resume-contact-strip strong {
-  color: var(--yellow);
+  color: var(--gold);
 }
 
 /* ==========================================================
    HEADER & NAVIGATION
    ========================================================== */
 header {
-  background: rgba(242, 242, 242, 0.88);
+  background: rgba(35, 35, 35, 0.88); /* Ajustado para cinza escuro */
   backdrop-filter: blur(4px);
-  border-bottom: 3px solid var(--blue-baby);
-  box-shadow: 0 2px 0 var(--blue-mid);
+  border-bottom: 3px solid var(--purple-bright);
+  box-shadow: 0 2px 0 var(--purple-mid);
 }
 
 .header-inner {
@@ -207,14 +211,14 @@ header {
   font-family: Impact, "Arial Black", sans-serif;
   font-size: 32px;
   letter-spacing: 2px;
-  color: var(--blue-baby);
-  text-shadow: 2px 2px 0 var(--yellow);
+  color: var(--purple-bright);
+  text-shadow: 2px 2px 0 var(--gold);
 }
 
 .logo-tagline {
   margin-top: 6px;
   font-size: 11px;
-  color: var(--blue-mid);
+  color: var(--purple-light);
   letter-spacing: 2px;
   font-weight: bold;
 }
@@ -230,22 +234,22 @@ header {
 .visitor-chip span {
   display: block;
   font-size: 10px;
-  color: var(--blue-mid);
+  color: var(--purple-light);
   font-weight: bold;
 }
 
 .visitor-chip strong {
   font-size: 16px;
-  color: var(--blue-deep);
+  color: var(--gold);
 }
 
 nav {
   background: linear-gradient(
     180deg,
-    rgba(51, 102, 204, 0.9),
-    rgba(0, 51, 160, 0.9)
+    rgba(140, 37, 172, 0.9),
+    /* --purple-mid */ rgba(112, 48, 160, 0.9) /* --purple-deep */
   );
-  border-bottom: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--gold);
 }
 
 nav ul {
@@ -268,15 +272,15 @@ nav a {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
-  border-right: 1px solid var(--blue-light);
+  border-right: 1px solid var(--purple-light);
   transition:
     background 0.25s,
     color 0.25s;
 }
 
 nav a:hover {
-  background: var(--yellow);
-  color: var(--blue-deep);
+  background: var(--gold);
+  color: var(--purple-deep);
 }
 
 nav a:visited {
@@ -291,7 +295,7 @@ nav a:visited {
 .hero {
   padding: 60px 20px;
   text-align: center;
-  border-bottom: 4px solid var(--yellow);
+  border-bottom: 4px solid var(--gold);
   width: auto;
 }
 
@@ -300,7 +304,7 @@ nav a:visited {
 }
 
 .eyebrow {
-  color: var(--yellow);
+  color: var(--gold);
   font-family: "Courier New", monospace;
   letter-spacing: 3px;
   font-size: 12px;
@@ -311,25 +315,25 @@ nav a:visited {
   font-family: Impact, "Arial Black", sans-serif;
   font-size: 38px;
   color: white;
-  text-shadow: 3px 3px 0 var(--blue-deep);
+  text-shadow: 3px 3px 0 var(--purple-deep);
 }
 
 .hero .sub {
   margin-bottom: 28px;
-  color: var(--blue-pale);
+  color: var(--purple-pale);
   font-weight: bold;
 }
 
 .btn-explore {
   display: inline-block;
   padding: 12px 34px;
-  background: linear-gradient(180deg, #ffe066, var(--yellow-dark));
-  border: 3px outset var(--yellow);
-  color: var(--blue-deep);
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+  border: 3px outset var(--gold);
+  color: var(--purple-deep);
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
-  box-shadow: 0 4px 0 #8a6a00;
+  box-shadow: 0 4px 0 #6e4c22; /* Sombra baseada no gold-dark */
   transition:
     transform 0.2s,
     background 0.2s;
@@ -337,14 +341,14 @@ nav a:visited {
 
 .btn-explore:hover {
   transform: translateY(-2px);
-  background: linear-gradient(180deg, #fff3b0, var(--yellow));
+  background: linear-gradient(180deg, #dfcbb3, var(--gold));
 }
 
 /* Hero Currículo */
 .resume-hero {
   padding: 46px 20px 36px;
   text-align: center;
-  border-bottom: 4px solid var(--yellow);
+  border-bottom: 4px solid var(--gold);
 }
 
 .resume-avatar {
@@ -355,12 +359,12 @@ nav a:visited {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(180deg, var(--blue-baby), var(--blue-mid));
-  border: 3px outset var(--yellow);
+  background: linear-gradient(180deg, var(--purple-bright), var(--purple-mid));
+  border: 3px outset var(--gold);
   color: white;
   font-family: Impact, "Arial Black", sans-serif;
   font-size: 30px;
-  text-shadow: 2px 2px 0 var(--blue-deep);
+  text-shadow: 2px 2px 0 var(--purple-deep);
 }
 .resume-avatar img {
   width: 100%;
@@ -368,16 +372,23 @@ nav a:visited {
   object-fit: cover;
   border-radius: 50%;
 }
+.resume-avatar video {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center bottom;
+}
 .resume-hero h2 {
   margin: 0 0 6px;
   font-family: Impact, "Arial Black", sans-serif;
   font-size: 34px;
   color: white;
-  text-shadow: 3px 3px 0 var(--blue-deep);
+  text-shadow: 3px 3px 0 var(--purple-deep);
 }
 
 .resume-hero .sub {
-  color: var(--blue-pale);
+  color: var(--purple-pale);
   font-weight: bold;
 }
 
@@ -392,14 +403,14 @@ nav a:visited {
 .btn-print {
   display: inline-block;
   padding: 10px 26px;
-  background: linear-gradient(180deg, #ffe066, var(--yellow-dark));
-  border: 3px outset var(--yellow);
-  color: var(--blue-deep);
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+  border: 3px outset var(--gold);
+  color: var(--purple-deep);
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: 0 4px 0 #8a6a00;
+  box-shadow: 0 4px 0 #6e4c22;
   font-family: inherit;
   transition: transform 0.2s;
 }
@@ -419,10 +430,10 @@ main {
 
 .panel {
   margin-bottom: 24px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(35, 35, 35, 0.9); /* Ajustado para painel escuro */
   backdrop-filter: blur(4px);
-  border: 2px solid var(--blue-baby);
-  box-shadow: 4px 4px 0 var(--blue-mid);
+  border: 2px solid var(--purple-bright);
+  box-shadow: 4px 4px 0 var(--purple-mid);
   scroll-margin-top: 90px;
 }
 
@@ -431,9 +442,9 @@ main {
   padding: 12px 18px;
   font-size: 15px;
   letter-spacing: 1px;
-  color: white;
-  background: linear-gradient(180deg, var(--blue-baby), var(--blue-mid));
-  border-bottom: 3px solid var(--yellow);
+  color: rgb(247, 244, 244);
+  background: linear-gradient(180deg, var(--purple-bright), var(--purple-mid));
+  border-bottom: 3px solid var(--gold);
 }
 
 .panel-body {
@@ -486,8 +497,8 @@ main {
   min-width: 220px;
   padding: 18px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.92);
-  border: 2px solid var(--blue-baby);
+  background: rgba(35, 35, 35, 0.92); /* Ajustado para painel escuro */
+  border: 2px solid var(--purple-bright);
   box-shadow: 2px 2px 0 var(--gray-line);
   transition:
     transform 0.25s,
@@ -497,8 +508,8 @@ main {
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: var(--yellow-dark);
-  box-shadow: 6px 6px 0 var(--blue-mid);
+  border-color: var(--gold-dark);
+  box-shadow: 6px 6px 0 var(--purple-mid);
 }
 
 .icon {
@@ -514,18 +525,24 @@ main {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--blue-light);
+  border: 3px solid var(--purple-light);
+}
+.tag-list{
+align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
 }
 
 .card h3 {
   margin: 10px 0;
-  color: var(--blue-strong);
+  color: var(--purple-bright);
   font-size: 15px;
 }
 
 .card p {
   margin: 0;
-  color: #444;
+  color: var(--ink-secondary); /* Cinza claro para leitura no escuro */
   font-size: 12px;
 }
 
@@ -540,24 +557,24 @@ main {
 
 .skill-name {
   font-weight: bold;
-  color: var(--blue-strong);
+  color: var(--purple-bright);
 }
 
 .skill-bar {
   height: 16px;
   overflow: hidden;
   border: 2px inset var(--gray-line);
-  background: white;
+  background: var(--gray-bg);
 }
 
 .skill-fill {
   height: 100%;
   background: repeating-linear-gradient(
     45deg,
-    var(--yellow),
-    var(--yellow) 8px,
-    var(--yellow-dark) 8px,
-    var(--yellow-dark) 16px
+    var(--gold),
+    var(--gold) 8px,
+    var(--gold-dark) 8px,
+    var(--gold-dark) 16px
   );
 }
 
@@ -570,32 +587,43 @@ main {
 .proj-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 0;
+  margin: 0;
 }
 
 .proj-list li {
-  flex: 1;
-  min-width: 220px;
+  list-style: none;
+
+  width: 260px;
+  box-sizing: border-box;
+
   padding: 18px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.95);
+
+  background: rgba(35, 35, 35, 0.95);
   border: 2px solid var(--gray-line);
+
   transition:
     transform 0.25s,
-    border-color 0.25s;
+    border-color 0.25s,
+    box-shadow 0.25s;
 }
-
 .proj-list li:hover {
   transform: translateY(-5px);
-  border-color: var(--blue-mid);
+  border-color: var(--purple-mid);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 
 .proj-list strong {
   display: block;
   margin-bottom: 10px;
-  color: var(--blue-strong);
+  color: var(--purple-bright);
   font-size: 15px;
 }
+
 
 /* Contato Portal */
 .contact-links {
@@ -609,21 +637,19 @@ main {
 
 .contact-links a {
   font-weight: bold;
-  color: var(--blue-strong);
+  color: var(--purple-light);
   transition: color 0.25s;
 }
 
 .contact-links a:hover {
-  color: var(--yellow-dark);
+  color: var(--gold);
 }
-
 
 /* ==========================================================
    RESUME CONTENT SECTIONS
    ========================================================== */
 
 /* Timeline (Formação & Experiência) */
-
 
 .timeline {
   display: flex;
@@ -633,18 +659,19 @@ main {
 
 .timeline-item {
   padding: 16px 18px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(35, 35, 35, 0.95); /* Ajustado para painel escuro */
   border: 2px solid var(--gray-line);
-  border-left: 6px solid var(--blue-mid);
+  border-left: 6px solid var(--purple-mid);
 }
 
 .timeline-item h3 {
   margin: 0 0 4px;
-  color: var(--blue-strong);
+  color: var(--purple-bright);
   font-size: 14px;
 }
 
 .timeline-item .badge {
+  font-size: 50px;
   display: inline-block;
   margin-bottom: 8px;
   padding: 2px 10px;
@@ -652,15 +679,15 @@ main {
   font-size: 10px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: var(--blue-deep);
-  background: var(--yellow);
-  border: 1px solid var(--yellow-dark);
+  color: var(--purple-deep);
+  background: var(--gold);
+  border: 1px solid var(--gold-dark);
 }
 
 .timeline-item p {
   margin: 0;
   font-size: 12px;
-  color: #444;
+  color: var(--ink-secondary); /* Cinza claro para leitura no escuro */
 }
 
 /* Badges / Tags (Habilidades & Idiomas) */
@@ -675,8 +702,8 @@ main {
   font-family: "Courier New", monospace;
   font-size: 11px;
   font-weight: bold;
-  color: var(--blue-deep);
-  background: var(--blue-pale);
+  color: var(--purple-deep);
+  background: var(--purple-pale);
   border: 2px inset var(--gray-line);
 }
 
@@ -689,24 +716,23 @@ main {
 
 .contact-item {
   padding: 14px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid var(--blue-baby);
+  background: rgba(35, 35, 35, 0.95); /* Ajustado para painel escuro */
+  border: 2px solid var(--purple-bright);
 }
 
 .contact-item span {
   display: block;
   font-family: "Courier New", monospace;
   font-size: 10px;
-  color: var(--blue-mid);
+  color: var(--purple-light);
   font-weight: bold;
   margin-bottom: 4px;
 }
 
 .contact-item strong {
   font-size: 13px;
-  color: var(--blue-deep);
+  color: var(--gold);
 }
-
 
 /* ==========================================================
    FOOTER & NAVIGATION FOOTER
@@ -714,9 +740,9 @@ main {
 footer {
   padding: 22px;
   text-align: center;
-  background: rgba(0, 31, 92, 0.9);
-  border-top: 4px solid var(--yellow);
-  color: var(--blue-pale);
+  background: rgba(112, 48, 160, 0.9); /* Deep purple com opacidade */
+  border-top: 4px solid var(--gold);
+  color: var(--purple-pale);
 }
 
 .footer-nav {
@@ -729,12 +755,12 @@ footer {
 }
 
 .footer-nav a {
-  color: var(--blue-light);
+  color: var(--purple-light);
   transition: color 0.25s;
 }
 
 .footer-nav a:hover {
-  color: var(--yellow);
+  color: var(--gold);
 }
 
 /* ==========================================================
@@ -748,9 +774,9 @@ footer {
   bottom: 20px;
   width: 46px;
   height: 46px;
-  border: 2px outset var(--blue-light);
-  background: var(--blue-strong);
-  color: var(--yellow);
+  border: 2px outset var(--purple-light);
+  background: var(--purple-strong);
+  color: var(--gold);
   font-size: 18px;
   cursor: pointer;
   display: none;
@@ -762,7 +788,7 @@ footer {
 
 .back-to-top:hover {
   transform: translateY(-4px);
-  background: var(--blue-mid);
+  background: var(--purple-mid);
 }
 
 .back-to-top.show {
@@ -816,7 +842,7 @@ footer {
   nav a {
     justify-content: center;
     border-right: none;
-    border-bottom: 1px solid var(--blue-light);
+    border-bottom: 1px solid var(--purple-light);
   }
 
   .cards {
@@ -836,7 +862,7 @@ footer {
   }
 }
 
-/* Impressão (Apenas para o Currículo) */
+/* Impressão (Otimizada para não imprimir o fundo escuro) */
 @media print {
   .video-background,
   .info-strip,
@@ -848,11 +874,46 @@ footer {
   }
 
   body.resume-body {
-    background: white;
+    background: white !important;
+    color: #111111 !important;
   }
 
   .panel {
-    box-shadow: none;
+    background: white !important;
+    color: #111111 !important;
+    border-color: #333333 !important;
+    box-shadow: none !important;
     break-inside: avoid;
+  }
+
+  .panel h2 {
+    background: #f0f0f0 !important;
+    color: #111111 !important;
+    border-bottom: 2px solid #333333 !important;
+  }
+
+  .timeline-item,
+  .contact-item,
+  .proj-list li {
+    background: white !important;
+    color: #111111 !important;
+    border: 1px solid #cccccc !important;
+  }
+
+  .timeline-item h3,
+  .proj-list strong,
+  .contact-item strong {
+    color: #111111 !important;
+  }
+
+  .timeline-item p,
+  .card p {
+    color: #444444 !important;
+  }
+
+  .tag {
+    background: #f0f0f0 !important;
+    color: #111111 !important;
+    border: 1px solid #cccccc !important;
   }
 }
