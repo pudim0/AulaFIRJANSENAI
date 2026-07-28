@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBB | Bom, Barato e Bolado 🌿</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="hippie-dark">
+    <!-- CABEÇALHO -->
+    <header class="site-header" id="home">
+      <div class="nav-bar">
+        <a class="brand" href="index.html">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg/500px-Snoop_Dogg_2019_by_Glenn_Francis.jpg"
+            alt="Retrato de Snoop Dogg"
+            class="brand-avatar"
+          />
+          <span class="brand-text">
+            <strong>BBB</strong>
+            <small>Bom, Barato e Bolado</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menu" id="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav class="nav" id="nav-menu" aria-label="Menu principal">
+          <ul>
+            <li>
+              <a href="#home" class="active" aria-current="page">
+                <i data-lucide="home"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="Produtos.html">
+                <i data-lucide="package"></i> <span>Produtos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i data-lucide="percent"></i> <span>Cupons</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contato">
+                <i data-lucide="phone"></i> <span>Contato</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+      <!-- Banner / Destaque -->
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="open-sign">
+          <i data-lucide="flame"></i> Aberto agora
+        </span>
+
+        <h2 id="hero-title">Bom, Barato e Bolado</h2>
+
+        <p class="hero-sub">
+          Hoje é dia <strong id="current_date" class="accent-text"></strong>. A
+          head shop preferida de quem manja da fita. Beck redondinho, preço
+          justo e atendimento de boa — paz e amor sempre. 🍁
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="Produtos.html">
+            <i data-lucide="shopping-bag"></i> Ver produtos
+          </a>
+          <a
+            class="btn btn-ghost"
+            href="https://wa.me/5521999852931?text=Quero%20um%20beck%20dos%20bons,%20mn!"
+          >
+            <i
+              ><img
+                src="joaquina.jpeg"
+                alt="Joaquina"
+                style="width: 56px; height: 56px"
+            /></i>
+            (21) 99985-2931
+          </a>
+        </div>
+
+        <a class="hero-highlight" href="snoopdog.html">
+          <i data-lucide="star"></i> Snoop Dogg investe nessa página!
+        </a>
+      </section>
+
+      <!-- Produtos em destaque -->
+      <section aria-labelledby="produtos-title">
+        <div class="section-head">
+          <h2 id="produtos-title">Produtos em destaque ✨</h2>
+          <a class="see-all" href="Produtos.html">
+            Ver catálogo completo <i data-lucide="chevron-right"></i>
+          </a>
+        </div>
+
+        <div class="product-grid">
+          <article class="panel product-card">
+            <div class="product-icon"><i data-lucide="leaf"></i></div>
+            <h3>Beck</h3>
+            <p>Beck clássico do dia a dia.</p>
+            <span class="price mono">R$ 10,00</span>
+          </article>
+
+          <article class="panel product-card">
+            <div class="product-icon"><i data-lucide="wind"></i></div>
+            <h3>Malbeck</h3>
+            <p>
+              O beck cheiroso para quem não quer ficar com cheiro depois de
+              fumar.
+            </p>
+            <span class="price mono">R$ 20,00</span>
+          </article>
+
+          <article class="panel product-card">
+            <div class="product-icon"><i data-lucide="droplet"></i></div>
+            <h3>Bong</h3>
+            <p>Ficar um pouco alto é bom às vezes.</p>
+            <span class="price mono">R$ 50,00</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Horário de funcionamento -->
+      <section class="panel" aria-labelledby="horario-title">
+        <div class="section-head">
+          <h2 id="horario-title">
+            <i data-lucide="clock"></i> Horário de atendimento
+          </h2>
+        </div>
+
+        <table class="horario-tabela">
+          <caption
+            class="section-sub"
+            style="text-align: left; margin-bottom: 0.75rem"
+          >
+            Venha na paz, estamos te esperando nesses horários:
+          </caption>
+          <thead>
+            <tr>
+              <th>Dias</th>
+              <th>Manhã</th>
+              <th>Tarde</th>
+              <th>Noite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Quarta a Sexta</th>
+              <td>10:00 - 12:00</td>
+              <td>16:00 - 18:00</td>
+              <td>18:00 - 03:00</td>
+            </tr>
+            <tr>
+              <th>Sábado e Domingo</th>
+              <td>07:00 - 12:00</td>
+              <td>16:00 - 18:00</td>
+              <td>18:00 - 05:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Sobre a loja (Sem Mapa e Formulário) -->
+      <section class="panel" id="sobre" aria-labelledby="sobre-title">
+        <h2 id="sobre-title">Sobre a loja 🍄</h2>
+        <p style="margin-bottom: 20px">
+          Somos uma head shop dedicada a oferecer produtos de qualidade, com
+          preço justo e aquele papo reto de quem manja do assunto. Sinta a vibe
+          e confira nossa essência:
+        </p>
+        <ul>
+          <li>Produtos de qualidade e confiáveis</li>
+          <li>Preços justos e acessíveis</li>
+          <li>Atendimento amigável e sem frescura</li>
+          <li>Ambiente acolhedor e descontraído</li>
+        </ul>
+      </section>
+
+      <!-- Contato -->
+      <section class="panel" id="contato" aria-labelledby="contato-title">
+        <div class="section-head">
+          <div>
+            <h2 id="contato-title">Fala com a gente 🕊️</h2>
+            <p class="section-sub">
+              Dúvidas, encomendas ou parcerias — manda um alô.
+            </p>
+          </div>
+        </div>
+
+        <div class="contato-info-box">
+          <ul class="contato-info">
+            <a
+              id="whatsapp-btn"
+              href="https://wa.me/5521999852931?text=Quero%20um%20beck%20dos%20bons,%20mn!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             <i><img src="joaquina.jpeg" alt="Joaquina" style="width: 56px; height: 56px;"></i> Falar no WhatsApp
+            </a>
+            <li><i data-lucide="mail"></i> contato@bombaratoebolado.com.br</li>
+            <li><i data-lucide="map-pin"></i> Rio de Janeiro, RJ</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <p>&copy; 2026 Bom, Barato e Bolado ✌️</p>
+      <p class="mono">Contato: (21) 99985-2931</p>
+      <a href="#home">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

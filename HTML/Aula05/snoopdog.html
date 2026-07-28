@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBB | Investidor 🌿</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="hippie-dark">
+    <!-- CABEÇALHO -->
+    <header class="site-header" id="home">
+      <div class="nav-bar">
+        <a class="brand" href="index.html">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg/500px-Snoop_Dogg_2019_by_Glenn_Francis.jpg"
+            alt="Retrato de Snoop Dogg"
+            class="brand-avatar"
+          />
+          <span class="brand-text">
+            <strong>BBB</strong> 
+            <small>Bom, Barato e Bolado</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menu" id="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav class="nav" id="nav-menu" aria-label="Menu principal">
+          <ul>
+            <li>
+              <a href="index.html">
+                <i data-lucide="home"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="Produtos.html">
+                <i data-lucide="package"></i> <span>Produtos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i data-lucide="percent"></i> <span>Cupons</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contato">
+                <i data-lucide="phone"></i> <span>Contato</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main style="align-items: center; justify-content: center; min-height: 75vh;">
+      <section class="hero" style="max-width: 600px; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        
+        <img 
+          src="SnoopDogg-joinha.png" 
+          alt="Snoop Dogg Joinha" 
+          style="width: 100%; max-width: 500px; border-radius: 50%; border: 4px solid var(--accent); box-shadow: 0 10px 30px var(--accent-dim);"
+        >
+        
+        <h2 style="font-family: var(--font-head); font-size: 32px; color: #fff; text-align: center; margin-top: 10px;">
+          "Eu invisto nessa página!" 🍁
+        </h2>
+        
+        <a href="index.html" class="btn btn-primary" style="margin-top: 20px;">
+          <i data-lucide="arrow-left"></i> Voltar para a Home
+        </a>
+        
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <p>&copy; 2026 Bom, Barato e Bolado ✌️</p>
+      <a href="#home">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

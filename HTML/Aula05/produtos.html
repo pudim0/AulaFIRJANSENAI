@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBB | Produtos 🌿</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="hippie-dark">
+    <!-- CABEÇALHO -->
+    <header class="site-header" id="home">
+      <div class="nav-bar">
+        <a class="brand" href="index.html">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg/500px-Snoop_Dogg_2019_by_Glenn_Francis.jpg"
+            alt="Retrato de Snoop Dogg"
+            class="brand-avatar"
+          />
+          <span class="brand-text">
+            <strong>BBB</strong> 
+            <small>Bom, Barato e Bolado</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menu" id="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav class="nav" id="nav-menu" aria-label="Menu principal">
+          <ul>
+            <li>
+              <a href="index.html">
+                <i data-lucide="home"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="Produtos.html" class="active" aria-current="page">
+                <i data-lucide="package"></i> <span>Produtos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i data-lucide="percent"></i> <span>Cupons</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contato">
+                <i data-lucide="phone"></i> <span>Contato</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+      <section class="panel" aria-labelledby="produtos-title">
+        <div class="section-head">
+          <h2 id="produtos-title">
+            <i data-lucide="package-open"></i> Menu Completo da Loja 🍄
+          </h2>
+        </div>
+        
+        <table class="horario-tabela">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Beck</td>
+              <td>Beck clássico do dia a dia</td>
+              <td class="accent-text mono">R$ 10,00</td>
+            </tr>
+            <tr>
+              <td>Malbeck</td>
+              <td>O beck cheiroso pra quem não quer ficar com cheiro depois de fumar</td>
+              <td class="accent-text mono">R$ 20,00</td>
+            </tr>
+            <tr>
+              <td>Beck de 1g</td>
+              <td>Beckzinho de 1g pra quem quer economizar</td>
+              <td class="accent-text mono">R$ 2,00</td>
+            </tr>
+            <tr>
+              <td>Pó de 5</td>
+              <td>Pra dar aquele raio curtinho</td>
+              <td class="accent-text mono">R$ 5,00</td>
+            </tr>
+            <tr>
+              <td>Pó de 10</td>
+              <td>Pra dar aquele raio longo</td>
+              <td class="accent-text mono">R$ 10,00</td>
+            </tr>
+            <tr>
+              <td>Bong</td>
+              <td>Bong de qualidade para os amantes do fumo</td>
+              <td class="accent-text mono">R$ 50,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer id="contato">
+      <p>&copy; 2026 Bom, Barato e Bolado ✌️</p>
+      <p>Loja de Beck muito foda</p>
+      <p class="mono">Contato: (21) 99985-2931</p>
+      <a href="#home">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
