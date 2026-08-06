@@ -1,0 +1,28 @@
+import { Component, signal, computed } from '@angular/core';
+import { Produto } from '../produto/produto';
+
+@Component({
+  selector: 'app-lista-produtos',
+  imports: [Produto],
+  templateUrl: './lista-produtos.html',
+  styleUrl: './lista-produtos.css',
+})
+export class ListaProdutos {
+  produtos = signal([
+    { nome: 'Notebook', preco: 3800 },
+    { nome: 'Mouse', preco: 179 },
+  ]);
+  totalProdutos = computed(() => this.produtos().length);
+  valorTotalProdutos = computed(() => this.produtos().reduce((total, produto) => total + produto.preco, 0));
+
+  substituirProdutos() {
+    this.produtos.set([ { nome: 'Produto novo', preco: 999.99 } ]);
+  }
+  exibirProduto(nome: string) {
+    console.log(`Produto selecionado: ${nome}`);
+  }
+
+  adicionarProduto() {
+    this.produtos.update((listaAtual) => [...listaAtual, { nome: 'Teclado', preco: 250 }]);
+  }
+}

@@ -1,0 +1,12 @@
+<p><button (click)="adicionarProduto()">Adicionar Produto</button></p>
+@for (item of produtos(); track item.nome) {
+<app-produto
+[nome]="item.nome"
+[preco]="item.preco"
+
+(produtoSelecionado)="exibirProduto($event)"
+></app-produto>
+}
+<h2>Total de produtos: {{ totalProdutos() }}</h2>
+<h2>Valor total dos produtos: {{ valorTotalProdutos() }}</h2>
+<p><button (click)="substituirProdutos()">Substituir Produtos</button></p>

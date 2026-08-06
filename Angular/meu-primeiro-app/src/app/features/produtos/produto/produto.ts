@@ -10,6 +10,7 @@ import { CurrencyPipe } from '@angular/common';
 export class Produto {
   @Input() nome: string = '';
   @Input() preco: number = 0;
+  
   @Output() produtoSelecionado = new EventEmitter<string>();
 
 selecionarProduto() {
