@@ -8,12 +8,27 @@ import { Produto } from '../produto/produto';
   styleUrl: './lista-produtos.css',
 })
 export class ListaProdutos {
+  constructor() {
+    effect(() => {
+      console.log('Lista de produtos alterada:', this.produtos());
+    });
+    effect(() => {
+      console.log('Valor total atualizado:', this.valorTotal());
+    });
+    effect(() => {
+      if (typeof document !== 'undefined') {
+        document.title = `(${this.totalProdutos()}) Minha Loja`;
+      }
+    });
+  }
+
+  produtoSelecionado = signal<string | null>(null);
+
   produtos = signal([
     { nome: 'Notebook', preco: 3800 },
     { nome: 'Mouse', preco: 179 },
   ]);
 
-  produtoSelecionado = signal<string | null>(null);
   totalProdutos = computed(() => this.produtos().length);
 
   valorTotal = computed(() => {
@@ -22,31 +37,11 @@ export class ListaProdutos {
 
   carrinho = signal<{ nome: string; preco: number }[]>([]);
 
-  adicionarAoCarrinho(produto: { nome: string; preco: number }) {
-    this.carrinho.update((listaAtual) => [...listaAtual, produto]);
-  }
-
   quantidadeCarrinho = computed(() => this.carrinho().length);
 
   totalCarrinho = computed(() => {
     return this.carrinho().reduce((total, item) => total + item.preco, 0);
   });
-
-  constructor() {
-    effect(() => {
-      console.log('Lista de produtos alterada:', this.produtos());
-    });
-
-    effect(() => {
-      console.log('Valor total atualizado:', this.valorTotal());
-    });
-
-    effect(() => {
-      if (typeof document !== 'undefined') {
-        document.title = `(${this.totalProdutos()}) Minha Loja`;
-      }
-    });
-  }
 
   exibirProduto(nome: string) {
     this.produtoSelecionado.set(nome);
@@ -57,6 +52,10 @@ export class ListaProdutos {
   }
 
   substituirProdutos() {
-    this.produtos.set([{ nome: 'Produto novo', preco: 999 }]);
+    this.produtos.set([{ nome: 'Produtonovo', preco: 999 }]);
+  }
+
+  adicionarAoCarrinho(produto: { nome: string; preco: number }) {
+    this.carrinho.update((listaAtual) => [...listaAtual, produto]);
   }
 }
