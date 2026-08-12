@@ -1,5 +1,6 @@
-import { Component, signal, computed, effect } from '@angular/core';
+import { Component, signal, computed, effect, inject } from '@angular/core';
 import { Produto } from '../produto/produto';
+import {ProdutosService} from '../produtos.service';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -8,12 +9,26 @@ import { Produto } from '../produto/produto';
   styleUrl: './lista-produtos.css',
 })
 export class ListaProdutos {
+  private produtosService = inject(ProdutosService);
   constructor() {
+    // carrega da API
+    this.carregarProdutos();
+
+    // effects continuam iguais
     effect(() => {
-      console.log('Lista de produtos alterada:', this.produtos());
+      console.log(
+        'Lista de produtos alterada:',
+
+        this.produtos(),
+      );
     });
+
     effect(() => {
-      console.log('Valor total atualizado:', this.valorTotal());
+      console.log(
+        'Valor total atualizado:',
+
+        this.valorTotal(),
+      );
     });
     effect(() => {
       if (typeof document !== 'undefined') {
@@ -22,12 +37,25 @@ export class ListaProdutos {
     });
   }
 
+  carregarProdutos() {
+    this.carregando.set(true);
+
+    this.produtosService.buscarProdutos().subscribe({
+        next: (dados) => {
+          const produtos = this.produtosService.transformarProdutos(dados);
+          this.produtos.set(produtos);
+          this.carregando.set(false);
+        },
+            error: (erro) => {
+              console.error('Erro ao carregar produtos:', erro);
+              this.carregando.set(false);
+            },
+      });
+  }
+        
   produtoSelecionado = signal<string | null>(null);
 
-  produtos = signal([
-    { nome: 'Notebook', preco: 3800 },
-    { nome: 'Mouse', preco: 179 },
-  ]);
+  produtos = signal<{ nome: string; preco: number }[]>([]);
 
   totalProdutos = computed(() => this.produtos().length);
 
@@ -36,6 +64,8 @@ export class ListaProdutos {
   });
 
   carrinho = signal<{ nome: string; preco: number }[]>([]);
+
+  carregando = signal(true);
 
   quantidadeCarrinho = computed(() => this.carrinho().length);
 
