@@ -1,6 +1,6 @@
-import {CanActivateFn} from '@angular/router';
-import {usuarioLogado} from './auth';
+import { CanActivateFn } from '@angular/router';
+import { usuarioLogado } from './auth';
 
-export const authGuard: CanActivateFn = (route, state) => {
-    return usuarioLogado();
-}
+export const authGuard: CanActivateFn = () => {
+  return usuarioLogado();
+};
